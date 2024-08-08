@@ -8,6 +8,7 @@ import Cart from "./components/client/panier/Cart";
 import NavScrolls from "./components/client/NavScrolls";
 import "./style.css"
 import Location from "./components/geolocation/Location";
+import NearLocations from "./components/geolocation/NearLocations";
 
 function App() {
  
@@ -24,6 +25,7 @@ function App() {
 <Route path="/categories"  element={<Listcategories/>}/>
 <Route path="/scategories"  element={<Listscategories/>}/>
 <Route path="/location"  element={<Location/>}/>
+<Route path="/nearLocations"  element={<NearLocations/>}/>
 </Routes>
 </Router>
     </>
