@@ -25,11 +25,15 @@ function NearLocations() {
 
    //pour déterminer mon emplacement
    useEffect(() =>{
-    navigator.geolocation.getCurrentPosition(function(position) {
+  /* navigator.geolocation.getCurrentPosition(function(position) {
       setLatitude(position.coords.latitude);
       setLongitude(position.coords.longitude);
-      });
-       
+      });*/
+      axios.get('https://api.ipdata.co/?api-key=41a2d8598be579f01fa3839161f3c65f40cc8a881a79e6de3e70f99f').then((res) => {
+        setLatitude(res.data.latitude);
+        setLongitude(res.data.longitude);
+      })
+        
     },[]);
 
 
